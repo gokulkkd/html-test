@@ -1,0 +1,178 @@
+/*===========================================================================*/
+/*! Var Declaration......... */
+/*===========================================================================*/
+
+:root {
+
+    /*+ Fonts Family */
+    --rtr-p-fontfam: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --rtr-s-fontfam: 'Lato', sans-serif;
+    --rtr-t-fontfam: serif;
+    --rtr-btn-fontfam: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --rtr-alt-fontfam: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /*+ Fonts Size */
+    --rtr-p-fontsize: 1rem;
+    --rtr-s-fontsize: 1rem;
+    --rtr-t-fontsize: 1.125rem;
+    --rtr-m-fontsize: 1.25rem;
+    --rtr-alt-fontsize: 1.4375rem;
+
+    /*+ Font Colors */
+    --rtr-p-color: #000000;
+    --rtr-s-color: #0004ca;
+    --rtr-t-color: #337AB7;
+    --rtr-btn-color: #F6635C;
+    --rtr-bg-color: #e1e0e0;
+    --rtr-alt-color: #000065;
+    --rtr-w-color: #ffffff;
+    --rtr-blk-color: #000000;
+
+    /*+ Line Height */
+    --rtr-p-lineheight: 1.5em;
+    --rtr-s-lineheight: 1.3em;
+    --rtr-t-lineheight: 1.5em;
+    font-size: 16px;
+
+}
+
+/*===========================================================================*/
+/*! Var Declaration End......... */
+/*===========================================================================*/
+
+/*===========================================================================*/
+/*! Basic resetting......... */
+/*===========================================================================*/
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+html {
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+
+    min-height: 100vh;
+    color: var(--rtr-p-color);
+    font-family: var(--rtr-p-fontfam);
+
+}
+
+img,
+picture,
+svg,
+video {
+
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+
+    color: inherit;
+}
+
+
+/*===========================================================================*/
+/*! Basic resetting End......... */
+/*===========================================================================*/
+
+.container {
+
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 20px;
+    border-left: 20px solid #c8eafc;
+    border-right: 20px solid #c8eafc;
+}
+
+.container-header {
+
+    max-width: 640px;
+    margin: 0 auto;
+
+
+}
+
+header h2 {
+
+    background: #c8eafc;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing:5px ;
+
+}
+
+.section-2 .container .rtr-welcome h1 {
+
+    font-size: var(--rtr-p-fontsize);
+    font-weight: 400;
+    line-height: var(--rtr-p-lineheight);
+    padding-bottom: 30px;
+}
+
+.section-3 .container .rtr-get-started {
+
+    background:#c8eafc;
+    padding: 20px;
+    border-radius: 30px;
+    display: grid;
+    gap: 10px;
+
+}
+
+.section-3 .container .rtr-get-started .rtr-title h3 {
+
+    letter-spacing: 4px;
+    color: var(--rtr-s-color);
+
+}
+
+.section-3 .container .rtr-get-started .rtr-list ol li {
+
+    list-style: decimal;
+    margin:10px 20px;
+    line-height: var(--rtr-p-lineheight);
+}
