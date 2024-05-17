@@ -1,0 +1,499 @@
+/*===========================================================================*/
+/*! Var Declaration......... */
+/*===========================================================================*/
+
+:root {
+
+    /*+ Fonts Family */
+    --ml-p-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-s-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-t-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-btn-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-alt-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+
+
+    /*+ Fonts Size */
+    --ml-p-fontsize: 2.25rem;
+    --ml-s-fontsize: 1.5rem;
+    --ml-t-fontsize: 1.875rem;
+    --ml-m-fontsize: 1rem;
+    --ml-alt-fontsize: 1.25rem;
+
+    /*+ Font Colors */
+    --ml-p-color: #777777;
+    --ml-s-color: #000000;
+    --ml-t-color: #337AB7;
+    --ml-btn-color: #F6635C;
+    --ml-bg-color: #e1e0e0;
+    --ml-alt-color: #000065;
+    --ml-w-color: #ffffff;
+    --ml-blk-color: #000000;
+
+    /*+ Line Height */
+    --ml-p-lineheight: 1.8em;
+    --ml-s-lineheight: 1.8em;
+    --ml-t-lineheight: 1.8em;
+    font-size: 16px;
+
+}
+
+/*===========================================================================*/
+/*! Var Declaration End......... */
+/*===========================================================================*/
+
+/*===========================================================================*/
+/*! Basic resetting......... */
+/*===========================================================================*/
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+html {
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+
+    min-height: 100vh;
+    color: var(--ml-p-color);
+    font-family: var(--ml-p-fontfam);
+
+}
+
+img,
+picture,
+svg,
+video {
+
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+
+    color: inherit;
+}
+
+/*===========================================================================*/
+/*! Basic resetting End......... */
+/*===========================================================================*/
+
+.container {
+
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/*===========================================================================*/
+/*! main Section -1......... */
+/*===========================================================================*/
+
+.ml-section-1 {
+
+    padding: 70px 10px;
+}
+
+.ml-section-1 .container .wrapper {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ml-section-1 .container .wrapper h1 {
+
+    font-size: var(--ml-p-fontsize);
+    color: var(--ml-p-color);
+    font-weight: 400;
+    font-family: var(--ml-p-fontfam);
+    text-align: center;
+}
+
+.ml-section-1 .container .wrapper h6 {
+
+    font-size: var(--ml-s-fontsize);
+    color: var(--ml-p-color);
+    font-weight: 400;
+    font-family: var(--ml-p-fontfam);
+    text-align: center;
+}
+
+.ml-section-1 .container .wrapper p {
+
+    font-size: var(--ml-m-fontsize);
+    color: var(--ml-p-color);
+    font-weight: 400;
+    font-family: var(--ml-p-fontfam);
+    line-height: var(--ml-p-lineheight);
+    text-align: center;
+}
+
+/*===========================================================================*/
+/*! main Section -2......... */
+/*===========================================================================*/
+.ml-section-2 {
+
+    padding: 10px;
+
+}
+
+.ml-section-2 .container .wrapper {
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+.ml-section-2 .container .wrapper .ml-form-main-head h3 {
+
+    font-size: var(--ml-t-fontsize);
+    color: var(--ml-blk-color);
+    font-weight: 500;
+    font-family: var(--ml-p-fontfam);
+}
+
+.ml-section-2 .container .wrapper .ml-form {
+
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.ml-section-2 .container .wrapper .ml-form .ml-form-title {
+
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    flex-basis: 100%;
+    margin: 25px 0;
+}
+
+.ml-section-2 .container .wrapper .ml-form .ml-form-title h4 {
+
+    font-size: 20px;
+    color: var(--ml-blk-color);
+    font-weight: 600;
+    font-family: var(--ml-p-fontfam);
+}
+
+.ml-section-2 .container .wrapper .ml-form .ml-form-title .ml-form-text {
+
+    width: 18%;
+    margin-bottom: 8px;
+}
+
+.ml-section-2 .container .wrapper .ml-form .ml-form-title .ml-form-line {
+
+    border-bottom: 1px solid #000000;
+    width: 80%;
+
+}
+
+.ml-section-2 .container .wrapper .ml-form .ml-form-content form {
+
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+.ml-section-2 .container .wrapper .ml-form .ml-form-content form .form-input-field {
+
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ml-section-2 .container .wrapper .ml-form .ml-form-content form .form-input-field label {
+
+    color: var(--ml-blk-color);
+    font-weight: 500;
+}
+
+.ml-section-2 .container .wrapper .ml-form .ml-form-content form .form-input-field select {
+
+    border: 1px solid var(--ml-blk-color);
+    padding: 10px;
+    border-radius: 4px;
+
+}
+
+.ml-section-2 .container .wrapper .ml-form .ml-form-content form .form-input-field input {
+
+    border: 1px solid var(--ml-blk-color);
+    padding: 10px;
+    border-radius: 4px;
+
+}
+
+.ml-section-2 .container .wrapper .ml-form .ml-form-content form .form-input-field select:is(:active, :hover, :focus),
+.ml-section-2 .container .wrapper .ml-form .ml-form-content form .form-input-field input:is(:active, :hover, :focus) {
+
+    border: 1px solid olivedrab;
+    outline: none;
+    background: #e3e1e128;
+}
+
+.ml-section-2 .container .wrapper .ml-form .ml-form-content form .checkbox {
+
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.ml-section-2 .container .wrapper .ml-form .ml-form-content form .checkbox a {
+
+    color: #1f7fd9;
+}
+
+input#checkbox {
+
+    width: 30px;
+    height: 30px;
+}
+
+/*===========================================================================*/
+/*! main Section -3......... */
+/*===========================================================================*/
+
+.ml-section-3 {
+
+    padding: 50px 10px;
+
+}
+
+.ml-section-3 .container .wrapper {
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.ml-section-3 .container .wrapper .ml-total {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ml-section-3 .container .wrapper .ml-total h3 {
+
+    font-size: var(--ml-s-fontsize);
+    color: var(--ml-blk-color);
+    font-weight: 400;
+    font-family: var(--ml-p-fontfam);
+}
+
+.al-range-slider__tooltip {
+
+    padding: 20px !important;
+    border-radius: 50% !important;
+    font-size: 20px !important;
+    background: #a3dc00 !important;
+    width: 70px !important;
+    height: 70px !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    box-shadow: none !important;
+    color: #000;
+}
+
+.al-range-slider__tooltip::before {
+
+    content: "$";
+}
+
+input.al-range-slider__input.js-al-range-slider__input {
+
+    display: none !important;
+}
+
+/** For Mobile-------------------- */
+
+@media (width <=425px) {
+
+    .ml-section-1,
+    .ml-section-3 {
+
+        padding: 30px 10px;
+    }
+
+    /*===========================================================================*/
+    /*! main Section -2......... */
+    /*===========================================================================*/
+
+    .ml-section-2 {
+
+        padding: 0 10px;
+    }
+
+    .ml-section-2 .container .wrapper {
+
+        gap: 20px;
+    }
+
+    .ml-section-2 .container .wrapper .ml-form {
+
+        gap: 12px;
+    }
+
+    .ml-section-2 .container .wrapper .ml-form-main-head h3 {
+
+        text-align: left;
+        font-size: var(--ml-s-fontsize);
+    }
+
+        .ml-section-2 .container .wrapper .ml-form .ml-form-title {
+
+            margin: 10px 0;
+        }
+
+    .ml-section-2 .container .wrapper .ml-form .ml-form-title .ml-form-text {
+
+        width: 100%;
+
+    }
+
+    .ml-section-2 .container .wrapper .ml-form .ml-form-title .ml-form-line {
+
+        display: none;
+
+    }
+
+    .ml-section-2 .container .wrapper .ml-form .ml-form-content form .form-input-field {
+
+        width: 100%;
+    }
+
+    .ml-section-2 .container .wrapper .ml-form .ml-form-content form .checkbox {
+
+        display: block;
+        margin: 0;
+    }
+
+    input#checkbox {
+
+        width: 13px;
+        height: 13px;
+    }
+
+    /*===========================================================================*/
+    /*! main Section -3......... */
+    /*===========================================================================*/
+
+
+    .ml-section-3 .container .wrapper .ml-total h3 {
+
+        font-size: var(--ml-alt-fontsize);
+    }
+
+    .al-range-slider__tooltip {
+
+        font-size: var(--ml-m-fontsize) !important;
+        background: #a3dc00 !important;
+        width: 45px !important;
+        height: 45px !important;
+
+    }
+}
+
+/** For Tab------------------- */
+
+@media (425px < width <=1024px) {
+
+
+    .ml-section-1,
+    .ml-section-2,
+    .ml-section-3 {
+
+        padding: 50px 10px;
+    }
+
+    /*===========================================================================*/
+    /*! main Section -2......... */
+    /*===========================================================================*/
+
+    .ml-section-2 .container .wrapper .ml-form .ml-form-title .ml-form-text {
+
+        width: 30%;
+
+    }
+
+    .ml-section-2 .container .wrapper .ml-form .ml-form-title .ml-form-line {
+
+        border-bottom: 1px solid #000000;
+        width: 68%;
+
+    }
+
+    .ml-section-2 .container .wrapper .ml-form .ml-form-content form .checkbox {
+
+        display: block;
+    }
+
+    input#checkbox {
+
+        width: 15px;
+        height: 15px;
+    }
+}
+
+/** For Widescreen------------------- */
+@media(width > 1200px) {
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 10px;
+
+    }
+
+}

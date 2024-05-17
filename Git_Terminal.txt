@@ -1,0 +1,9 @@
+1. git init
+2. git add README.md
+3. git add --all
+4. git commit -m "first commit"
+5. git branch -M main
+6. git remote add origin https://github.com/gokulkkd/test.git
+7. git remote -v
+8. git status 
+9.git push -u origin main

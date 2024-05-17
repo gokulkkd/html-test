@@ -1,0 +1,45 @@
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    border: 1px solid red;
+    min-height: 100vh;
+}
+
+.wrapper {
+
+    padding: 20px;
+    border: 1px solid green;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .head h1 {
+
+    border: 1px solid salmon;
+    padding: 20px;
+    background: gainsboro;
+    display: inline-block;
+    
+}
+
+.wrapper .head {
+
+    border: 1px solid yellow;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.wrapper .head:hover {
+
+    cursor: pointer;
+}

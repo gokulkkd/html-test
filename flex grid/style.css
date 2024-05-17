@@ -1,0 +1,229 @@
+/*===========================================================================*/
+/*! Var Declaration......... */
+/*===========================================================================*/
+
+:root {
+
+    /*+ Fonts Family */
+    --ml-p-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-s-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-t-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-btn-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-alt-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+
+
+    /*+ Fonts Size */
+    --ml-p-fontsize: 2.25rem;
+    --ml-s-fontsize: 1.5rem;
+    --ml-t-fontsize: 1.875rem;
+    --ml-m-fontsize: 1rem;
+    --ml-alt-fontsize: 1.25rem;
+
+    /*+ Font Colors */
+    --ml-p-color: #777777;
+    --ml-s-color: #000000;
+    --ml-t-color: #337AB7;
+    --ml-btn-color: #F6635C;
+    --ml-bg-color: #e1e0e0;
+    --ml-alt-color: #000065;
+    --ml-w-color: #ffffff;
+    --ml-blk-color: #000000;
+
+    /*+ Line Height */
+    --ml-p-lineheight: 1.8em;
+    --ml-s-lineheight: 1.8em;
+    --ml-t-lineheight: 1.8em;
+    font-size: 16px;
+
+}
+
+/*===========================================================================*/
+/*! Var Declaration End......... */
+/*===========================================================================*/
+
+/*===========================================================================*/
+/*! Basic resetting......... */
+/*===========================================================================*/
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+html {
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+
+    min-height: 100vh;
+    color: var(--ml-p-color);
+    font-family: var(--ml-p-fontfam);
+
+}
+
+img,
+picture,
+svg,
+video {
+
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+
+    color: inherit;
+}
+
+/*===========================================================================*/
+/*! Basic resetting End......... */
+/*===========================================================================*/
+
+.container {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 10px;
+    min-height: 100vh;
+    border: 1px solid red;
+}
+
+/* .wrapper ul {
+
+    display: flex;
+    gap: 20px;
+
+}
+
+.wrapper ul li {
+
+    flex-basis: 31.5%;
+
+} */
+
+.wrapper ul {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+
+}
+
+/* .wrapper ul li {
+
+    flex-basis: 31.5%;
+
+} */
+
+.wrapper ul li {
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+   
+}
+
+.wrapper ul li .desc {
+
+    padding: 0 20px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    
+}
+
+.wrapper ul li .main {
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.wrapper ul li .desc,
+.wrapper ul li .desc div:nth-child(2)  {
+
+    flex-grow: 1;
+
+}
+
+.wrapper ul li .desc :is(h3, p , a) {
+
+    text-align: center;
+    
+}
+
+.wrapper ul li .desc a {
+
+    display: inline-flex;
+    background: #F6635C;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    min-height: 40px;
+    color: #ffffff;
+    font-size: 15px;;
+    font-weight: 500;
+    border-radius: 50px;
+    
+}
+
+
+
+/* @media (width <= 768px) {
+
+    .container {
+
+        border: 1px solid green;
+    }
+}
+
+@media (width <= 1024px) {
+
+    .container {
+    
+            border: 1px solid yellow;
+        }
+} */
+

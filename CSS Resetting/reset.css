@@ -1,0 +1,167 @@
+/*===========================================================================*/
+/*! Var Declaration......... */
+/*===========================================================================*/
+
+:root {
+
+    /*+ Fonts Family */
+    --gmg-p-font:'Courier New', Courier, monospace;
+    --gmg-s-font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --gmg-t-font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --gmg-b-font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --gmg-alt-font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /*+ Font Colors */
+    --gmg-p-color:#F6635C;
+    --gmg-s-color:#40F8FF;
+    --gmg-t-color:#CECE5A;
+    --gmg-b-color:#F6635C;
+    --gmg-bg-color:#FFE5E5;
+    --gmg-alt-color:#000065;
+    --gmg-w-color:#ffffff;
+    --gmg-blk-color:#000000;
+
+    /*+ Line Height */
+    --gmg-p-lineheight:1.2em;
+    --gmg-s-lineheight:1.3em;
+    --gmg-t-lineheight:1.5em;
+
+    font-size: 16px;
+
+}
+
+/*===========================================================================*/
+/*! Var Declaration End......... */
+/*===========================================================================*/
+
+/*===========================================================================*/
+/*! Basic resetting......... */
+/*===========================================================================*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    color: #3A3A3A;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+img, picture, svg, video{
+    display: block;
+    max-width: 100%;
+}
+  input,textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  a {
+    text-decoration: none;    
+  }
+  li {
+    list-style: none;
+  }
+  a:link, a:visited, a:hover, a:active { 
+    color:inherit;
+}
+
+/*===========================================================================*/
+/*! Basic resetting End......... */
+/*===========================================================================*/
+
+
+
+.container {
+
+    max-width: 100%;
+    margin:0 auto;
+    padding: 10px;
+    border: 1px solid red;
+    min-height: 100vh;
+
+}
+
+.wrapper {
+
+    border: 1px solid lightcoral;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.wrapper h1 {
+
+    font-family: var(--gmg-p-font);
+    font-size: 1rem;
+    color: var(--gmg-p-color);
+}
+.wrapper h2 {
+
+    font-family: var(--gmg-s-font);
+    font-size: 2.5rem;
+    color: var(--gmg-s-color);
+}
+
+ a.test-btn-primary {
+
+    font-size: 1.25rem;
+    min-width: 200px;
+    min-height: 60px;
+    padding: 20px 50px;
+    border: 1px solid var(--gmg-blk-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background: var(--gmg-b-color);
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    isolation: isolate;
+
+}
+
+a.test-btn-primary::after {
+    content:"";
+    position: absolute;
+    z-index:-1;
+    background:var(--gmg-s-color);
+    inset: 0;
+    scale: 0 1;
+    transform-origin: left; /*removed it for transition from center */
+    transition: scale 450ms;
+}
+
+a.test-btn-primary:hover::after,
+a.test-btn-primary:focus-visible::after {
+    scale: 1 1 ;
+    transform-origin: left; /*removed it for transition from center */
+}
+
+
+@media(width <= 1440px ) {
+
+    .container {
+
+        max-width: 1200px;
+    }
+
+
+}
+@media(width > 1440px ) {
+
+    .container {
+
+        max-width: 1440px;
+    }
+}

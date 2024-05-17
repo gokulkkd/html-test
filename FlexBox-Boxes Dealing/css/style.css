@@ -1,0 +1,279 @@
+/*===========================================================================*/
+/*! Basic resetting......... */
+/*===========================================================================*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    color: #3A3A3A;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+
+}
+
+img, picture, svg, video{
+    display: block;
+    max-width: 100%;
+}
+  input,textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  a {
+    text-decoration: none;    
+  }
+  li {
+    list-style: none;
+  }
+  a:link, a:visited, a:hover, a:active { 
+    color:inherit;
+}
+
+/*===========================================================================*/
+/*! Basic resetting End......... */
+/*===========================================================================*/
+
+.container {
+
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+ 
+}
+
+
+/*===========================================================================*/
+/*! Section-6 ......... */
+/*===========================================================================*/
+
+.section-6 {
+    padding: 80px 10px;
+}
+
+.section-6 .container .kr-certification, .section-7 .container .kr-memberships {
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.section-6 .container .kr-certification .heading > h2, .section-7 .container .kr-memberships .heading > h2 {
+
+    color: #3A3A3A;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.625rem;
+    font-size: clamp(1.625rem, 1.1988847583643123rem + 1.734820322180917vw, 2.5rem);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.section-6 .container .kr-certification .heading > p, .section-7 .container .kr-memberships .heading > p  {
+
+    color: #3A3A3A;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.8em;
+    padding-top:35px;
+}
+
+.section-6 .container .kr-certification .content ul,.section-7 .container .kr-memberships .content ul {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.section-6 .container .kr-certification .content ul li>div,
+.section-7 .container .kr-memberships .content ul li {
+
+    flex-basis: 348px;
+    border: 1px solid darkgrey;
+}
+.section-6 .container .kr-certification .content ul li > div,.section-7 .container .kr-memberships .content ul li > div {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    padding: 5px;
+}
+.section-6 .container .kr-certification .content ul li p, .section-7 .container .kr-memberships .content ul li p {
+
+    color: #3A3A3A;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.0625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.section-6 .container .kr-certification .certificate-btn {
+
+    text-align: center;
+}
+
+.section-6 .container .kr-certification .certificate-btn a {
+
+    display: inline-block;
+    max-width: 250px;
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: 2px solid #5BA673;
+    /* box-shadow: 0px 20px 30px 0px rgba(91, 166, 115, 0.15); */
+    color: #5BA673;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.section-6 .container .kr-certification .certificate-btn a:hover {
+
+    color: #ffffff;
+    background: #d90873;
+    border: 2px solid #d90873;
+}
+
+/*===========================================================================*/
+/*! Section-7 ......... */
+/*===========================================================================*/
+
+.section-7 {
+    padding: 90px 10px 130px 10px;
+    background: #EDEBF5;
+}
+
+.section-7 .container .kr-memberships .content ul li .holder-li {
+
+    display: flex;
+    gap: 30px;
+
+}
+.section-7 .container .kr-memberships .content ul li:nth-child(1) p{
+
+    margin-top: -8px;
+}
+.section-7 .container .kr-memberships .content ul li:nth-child(4) p{
+
+    padding-top: 8px;
+}
+
+    /* For Mobile */  
+    @media ( width <= 425px )
+    {
+
+        /*===========================================================================*/
+        /*! Section-6 ......... */ /*! Section-7 ......... */
+        /*===========================================================================*/
+
+        .section-6, .section-7 {
+            padding: 50px 10px;
+        }
+
+        .section-6 .container .kr-certification,.section-7 .container .kr-memberships {
+            gap: 30px;
+        }
+        .section-6 .container .kr-certification .heading > p, .section-7 .container .kr-memberships .heading > p {
+
+            padding-top: 20px;
+        }
+        .section-6 .container .kr-certification .content ul,.section-7 .container .kr-memberships .content ul  {
+
+            flex-wrap: wrap;
+        }
+        .section-6 .container .kr-certification .content ul li .content-image img, .section-7 .container .kr-memberships .content ul li .content-image img {
+
+            max-width: 60%;
+            margin: 0 auto;
+        }
+        .section-7 .container .kr-memberships .content ul li {
+
+            /* max-width: 48%; */
+            flex-grow: 1;
+        }
+
+    }
+
+    /* For Tab */  
+    @media (426px <= width <= 768px )
+    {
+
+        /*===========================================================================*/
+        /*! Section-6 ......... */
+        /*===========================================================================*/
+
+        .section-6 {
+            padding: 50px 10px;
+        }
+        .section-6 .container .kr-certification .content ul li:nth-child(2) p{
+
+            padding-top: 20px;
+        }
+
+        /*===========================================================================*/
+        /*! Section-7 ......... */
+        /*===========================================================================*/
+
+        .section-7 .container .kr-memberships .content ul {
+
+            flex-wrap: wrap;
+            gap: 28px;
+        }
+        .section-6 .container .kr-certification .content ul li>div,
+        .section-7 .container .kr-memberships .content ul li {
+
+            flex-basis: 47%;
+            flex-grow: 1;
+        }
+
+
+    }
+
+
+    /* For Widescreen */
+
+    @media(width > 1024px) {
+
+        .container {
+
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 0 10px;
+
+        }
+        .section-6 .container .kr-certification .content ul li>div,
+        .section-7 .container .kr-memberships .content ul li {
+
+            flex-basis: 23%;
+            flex-grow: 1;
+        }
+
+    }
+    @media(width > 1600px) {
+
+        .container {
+
+            max-width: 1460px;
+            margin: 0 auto;
+            padding: 0 10px;
+         
+        }
+
+    }

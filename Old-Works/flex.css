@@ -1,0 +1,56 @@
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.section {
+
+    padding: 70px 10px;
+}
+
+.container {
+
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid red;
+}
+
+.wrapper {
+
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.wrapper > div {
+
+    border: 1px solid saddlebrown;
+    min-height: 200px;
+    padding: 20px;
+    flex: 0 0 32%;
+ 
+}
+
+/* @media(1000px <= width < 1500px) {
+
+        .container {
+        
+                max-width: 1200px;
+            }
+    .wrapper > div {
+
+        flex: 0 1 48%;
+        width: 48%;
+    }
+   
+} */
+@media(width >= 1600px) {
+
+    .container {
+
+        max-width: 1440px;
+    }
+}

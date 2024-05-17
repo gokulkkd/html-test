@@ -1,0 +1,266 @@
+/*===========================================================================*/
+/*! Var Declaration......... */
+/*===========================================================================*/
+
+:root {
+
+    /*+ Fonts Family */
+    --ml-p-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-s-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-t-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-btn-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-alt-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+
+
+    /*+ Fonts Size */
+    --ml-p-fontsize: 2.25rem;
+    --ml-s-fontsize: 1.5rem;
+    --ml-t-fontsize: 1.875rem;
+    --ml-m-fontsize: 1rem;
+    --ml-alt-fontsize: 1.25rem;
+
+    /*+ Font Colors */
+    --ml-p-color: #777777;
+    --ml-s-color: #000000;
+    --ml-t-color: #337AB7;
+    --ml-btn-color: #F6635C;
+    --ml-bg-color: #e1e0e0;
+    --ml-alt-color: #000065;
+    --ml-w-color: #ffffff;
+    --ml-blk-color: #000000;
+
+    /*+ Line Height */
+    --ml-p-lineheight: 1.8em;
+    --ml-s-lineheight: 1.8em;
+    --ml-t-lineheight: 1.8em;
+    font-size: 16px;
+
+}
+
+/*===========================================================================*/
+/*! Var Declaration End......... */
+/*===========================================================================*/
+
+/*===========================================================================*/
+/*! Basic resetting......... */
+/*===========================================================================*/
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+html {
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+
+    min-height: 100vh;
+    color: var(--ml-p-color);
+    font-family: var(--ml-p-fontfam);
+
+}
+
+img,
+picture,
+svg,
+video {
+
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+
+    color: inherit;
+}
+
+/*===========================================================================*/
+/*! Basic resetting End......... */
+/*===========================================================================*/
+
+.container {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 10px;
+    min-height: 100vh;
+    border: 1px solid red;
+}
+
+/* [data-filter] {
+    display: inline-block;
+    background: #04AA6D;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+} */
+
+.for-tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: red;
+    border-radius: 50px;
+    display: inline-block;
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.for-tab.active {
+    background-color: green;
+    color: white;
+}
+
+[data-filter]+[data-filter] {
+    margin-left: 5px;
+}
+
+[data-tags]:not(.show) {
+    display: none !important;
+}
+
+/* [data-tags] {
+
+    display: inline-block !important;
+    background: #f1f1f1;
+    padding: 4rem 1rem;
+    margin: 1rem 1rem 1rem 0;
+} */
+
+.grid-container {
+
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 50px 0 !important;
+    overflow: hidden;
+    animation: fadeInUp 2s ease forwards;
+}
+
+.grid-item {
+
+    background: #F6635C;
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    width: 200px;
+    height: 200px;
+    
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (width <= 430px) {
+
+    #for-tabs {
+
+        display: flex !important;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .for-tab, [data-filter]+[data-filter] {
+
+        margin: 0;
+    }
+
+    .grid-container {
+
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px 15px;
+        padding: 30px 0 0 0 !important;
+    }
+
+    .grid-item {
+
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media (768px <= width <=1024px) {
+
+    #for-tabs {
+        display: flex !important;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .for-tab, [data-filter]+[data-filter] {
+
+        margin: 0;
+    }
+
+    .grid-container {
+
+        grid-template-columns: repeat(5, 1fr);
+        gap: 25px 15px;
+        padding: 30px 0 0 0 !important;
+    }
+
+    .grid-item {
+
+        width: 125px;
+        height: 125px;
+    }
+}
+
+
+

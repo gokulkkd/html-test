@@ -1,0 +1,339 @@
+.headermain,
+.cru-footer {
+    display: none;
+}
+
+.cavfrm_wrapper {
+    padding: 55px 0;
+    background-color: #fcfbfbe3;
+}
+
+
+body {
+
+    background-image: url('/wp-content/themes/cavalier-rescue/img/cav-bg3.webp');
+    background-attachment: fixed;
+}
+
+.cavfrm_container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 50px 0px 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-top: #c66e49 7px solid;
+    position: relative;
+}
+
+.cavfrm_container:before {
+    position: absolute;
+    background-color: #fff;
+    width: 24px;
+    height: 9px;
+    content: "  ";
+    z-index: 9;
+    top: -6px;
+    right: 42px;
+    rotate: -47deg;
+}
+
+.cavfrm_container:after {
+    position: absolute;
+    background-color: #fff;
+    width: 24px;
+    height: 9px;
+    content: "  ";
+    z-index: 9;
+    top: -6px;
+    right: 23px;
+    rotate: -47deg;
+}
+
+.cavfrm_header {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    vertical-align: middle;
+    padding-bottom: 25px
+}
+
+.cavfrm_header h1 {
+    padding: 25px 0 0 25px;
+}
+
+.cavfrm_container label {
+    display: block;
+    font-weight: bold;
+}
+
+.cavfrm_row {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.cavfrm_row>div {
+    flex: 1;
+}
+
+.cavfrm_row .x2_col {
+    flex: 2;
+}
+
+span.age-frm-dob {
+    font-size: 19px;
+    font-weight: 400;
+    font-style: italic;
+
+}
+
+.cavfrm_container input[type="number"].ageinmonths {
+    width: 224px !important;
+}
+
+.cavfrm_unqid_col {
+    max-width: 58%;
+    margin: 0 auto;
+    display: table;
+}
+
+.cavfrm_unqid_col input[type="text"] {
+    display: inline-block;
+    max-width: 450px;
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-right: 0 !important;
+}
+
+.cavfrm_unqid_col button {
+    display: inline-block;
+    border: 0;
+    background-color: #ae5936;
+    padding: 11px 21px;
+    color: #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.cavfrm_unqid_col button:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: " \f0d0";
+}
+
+.cavfrm_unqid_col button:hover {
+    background-color: #7e3e22;
+}
+
+.cavfrm_container input[type="text"],
+.cavfrm_container input[type="number"],
+.cavfrm_container input[type="date"],
+.cavfrm_container input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.cavfrm_unqid_col span {
+    display: table;
+    width: 100%;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+}
+
+.cavfrm_container textarea:focus,
+.cavfrm_container input[type="text"]:focus,
+.cavfrm_container input[type="number"]:focus,
+.cavfrm_container input[type="date"]:focus,
+.cavfrm_container input[type="email"]:focus {
+    outline-color: #c76e49 !important;
+    background-color: #c76e490f !important;
+}
+
+hr {}
+
+hr.dashed {
+    border-top: 1px dashed rgba(0, 0, 0, .1);
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+hr.blank {
+    border-top: 5px solid rgb(0 0 0 / 0%);
+}
+
+
+.cavfrm_container input[type="radio"] {
+    margin-top: 5px;
+    width: fit-content;
+    margin-right: 5px;
+    cursor: pointer;
+    width: 15%;
+    height: 27px;
+    accent-color: #c66e49;
+}
+
+.cavfrm_container .radio-label {
+    display: inline-block;
+    margin-right: 10px;
+    /* Adjust the margin as needed for spacing */
+    line-height: 2;
+    width: 100%;
+}
+
+
+.cavfrm_container select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.cavfrm_container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    /* margin-bottom: 10px; */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #c66e49;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    width: 100%;
+    cursor: pointer;
+}
+
+p.cru-footcopyright {
+    font-size: 14px;
+    text-align: center;
+    color: #bebebe;
+    padding-top: 95px;
+    padding-bottom: 25px;
+}
+
+p.cru-footcopyright a {
+    color: #d8a791;
+}
+
+p.cru-footcopyright a:hover {
+    color: #c56f49;
+}
+
+.cavfrm_container input[type="submit"]:hover {
+    background-color: #7c3d22;
+}
+
+.cavfrm_container #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    text-align: center;
+    padding-top: 20%;
+    color: white;
+    font-size: 24px;
+}
+
+.cavfrm_container form[disabled] {
+    pointer-events: none;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    /* For IE8 and earlier */
+}
+
+@media (width <=768px) {
+
+
+    .cavfrm_wrapper {
+
+        padding: 20px 0;
+    }
+
+
+    .cavfrm_container {
+
+        max-width: 100%;
+        padding: 25px 15px;
+        margin: 15px
+    }
+
+    .cavfrm_header {
+        padding: 20px 15px;
+        gap: 20px;
+
+    }
+
+    .cavfrm_header h1 {
+
+        padding: 0;
+        font-size: 1.875rem;
+        font-size: clamp(1.875rem, 1.7141453831041258rem + 0.6548788474132285vw, 2.5rem);
+        text-align: center;
+        margin: 0;
+    }
+
+    .cavfrm_header>div {
+
+        width: 50%;
+
+        margin: auto 0;
+
+    }
+
+    .cavfrm_header>div>img {
+
+        max-width: 100%;
+    }
+
+    .cavfrm_row {
+
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-group,
+    label,
+    .cavfrm_container .radio-label {
+
+        margin: 0
+    }
+
+    .cavfrm_container input[type="text"],
+    .cavfrm_container input[type="number"],
+    .cavfrm_container input[type="date"],
+    .cavfrm_container input[type="email"] {
+
+        margin-bottom: 5px;
+    }
+
+    hr.blank {
+        display: none;
+    }
+
+    p.cru-footcopyright {
+
+        padding: 50px 0 0 0;
+    }
+
+
+
+}

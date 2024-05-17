@@ -1,0 +1,170 @@
+.adj-main-section>.inner {
+    max-width: 1140px !important;
+}
+
+.adj-container>.inner .c-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.adj-wrapper>.dividerContainer,
+.adj-feature-wrapper,
+.adj-feature-container {
+    background: #f6f6f6 !important;
+}
+
+.img-feature-container {
+    display: flex !important;
+    flex-direction: column !important;
+    border-radius: 5px;
+    gap: 5px;
+}
+
+.img-feature-container>.txt-container {
+    width: 100% !important;
+}
+
+.img-container {
+    margin-top: -50px !important;
+}
+
+.txt-container>.featureText {
+    margin-top: 10px;
+}
+
+.adj-main-section3 .bgCover {
+    background-attachment: unset !important;
+    background-position: 100% !important;
+}
+
+.adj-li-holder>.inner {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap !important;
+    gap: 30px !important;
+}
+
+.adj-li-holder>.inner .c-column {
+    width: 48% !important;
+}
+
+.adj-cta-green:hover {
+
+    background: #3edc88;
+}
+
+.adj-cta-trans:hover {
+
+    background: #f05355 !important;
+}
+
+/* =================================================
+Mobile CSS Here
+================================================= */
+
+@media (width <=425px) {
+
+    * {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        p {
+
+            text-align: center
+        }
+    }
+
+    .adj-left-text>.c-button {
+        margin: 20px auto 0 auto;
+    }
+
+    .adj-container>.inner {
+        gap: 25px;
+    }
+
+    .adj-main-section2,
+    .adj-main-section3,
+    .adj-main-section4 {
+        padding: 40px 10px !important;
+    }
+
+    .adj-feature-container,
+    .adj-btn-container,
+    .adj-cta-container {
+        padding: 0 !important;
+    }
+
+    .adj-btn-container>.inner {
+
+        flex-direction: column;
+        gap: 20px
+    }
+
+    .adj-cta-btn {
+
+        padding: 18px 15px !important;
+
+    }
+
+    .adj-li-holder {
+
+        padding: 0 !important;
+        margin-top: 25px !important;
+    }
+
+    .adj-li-holder>.inner .adj-li-item {
+        padding: 30px 20px !important;
+    }
+
+    .adj-li-holder>.inner .c-column {
+        width: 100% !important;
+    }
+}
+
+/* =================================================
+Tablet CSS Here
+================================================= */
+
+
+@media (425px < width <=768px) {
+
+
+    .image-container>div div {
+
+        text-align: center;
+        margin-bottom: 35px
+    }
+
+    .adj-left-text>.c-button {
+        margin: 20px 0 0 0;
+    }
+
+    .adj-right-img {
+        justify-content: start !important;
+    }
+
+    .adj-main-section2,
+    .adj-main-section3,
+    adj-main-section4 {
+        padding: 40px 10px !important;
+    }
+
+    .adj-main-section3 .bgCover {
+        background-position: 50% !important;
+    }
+
+    .adj-btn-container>.inner {
+
+        flex-direction: column;
+        gap: 20px
+    }
+
+    .adj-cta-btn {
+
+        padding: 18px 15px !important;
+
+    }
+}

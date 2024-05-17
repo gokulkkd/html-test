@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="section-1">
+        <div class="container">
+            <div class="wrapper">
+                <div id="for-tabs">
+                    <span data-filter class="for-tab active" onclick="openTab(event, 'tab1')">All</span>
+                    <span data-filter="cat" class="for-tab" onclick="openTab(event, 'tab2')">Cats</span>
+                    <span data-filter="dog" class="for-tab" onclick="openTab(event, 'tab3')">Dogs</span>
+                    <span data-filter="monkey" class="for-tab" onclick="openTab(event, 'tab3')">Monkeys</span>
+                </div>
+                
+                <div>
+                    <div data-tags class="for-content" id="tab1"></div>
+                    <div data-tags="cat" class="grid-container for-content" id="tab2">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                    </div>
+                    <div data-tags="dog" class="grid-container for-content" id="tab3">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                    </div>
+                    <!-- <div data-tags="dog">Some pretty Dogs</div>
+                    <div data-tags="cat,monkey">Cats and Monkeys!</div>
+                    <div data-tags="monkey">Only Monkeys!</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="js/autofilter.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

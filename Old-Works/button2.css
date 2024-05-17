@@ -1,0 +1,36 @@
+div {
+    padding:50px;
+}
+  
+a,button {
+  
+    display:inline-flex;
+    padding:10px 20px;
+    min-width:130px;
+    min-height:30px;
+    background:#34a853;
+    border-radius:10px;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+    cursor:pointer;
+    transition:all 0.3s ease-in-out;
+    font-size:20px;
+    font-weight:600;
+    color:#333333;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+a:hover {
+    background:#fdd600;
+    color:#333333;
+}
+  
+.fa-angles-left {
+    font-size:20px;
+    margin-top:5px;
+    
+}

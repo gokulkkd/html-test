@@ -1,0 +1,176 @@
+selector.bias-left-post-content h1 {
+    color: var(--e-global-color-text);
+    font-family: "Lora", Sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+selector.bias-left-post-content h2 {
+    color: var(--e-global-color-text);
+    font-family: "Lora", Sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+
+selector.bias-left-post-content h3 {
+    color: var(--e-global-color-text);
+    font-family: "Lora", Sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+selector.bias-left-post-content h4 {
+    color: var(--e-global-color-text);
+    font-family: "Lora", Sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+selector.bias-left-post-content h5 {
+    color: var(--e-global-color-text);
+    font-family: "Lora", Sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+selector.bias-left-post-content h6 {
+    color: var(--e-global-color-text);
+    font-family: "Lora", Sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+selector.bias-left-post-content p {
+    color: #333758;
+    font-family: "Inter", Sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.62em;
+}
+
+selector.bias-left-post-content a {
+    color: #333758;
+    font-family: "Inter", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.62em;
+    text-decoration: underline;
+}
+
+selector.bias-left-post-content a:hover {
+
+    color: #fdd600;
+}
+
+selector.bias-left-post-content img {
+
+    /*max-width: 560px;*/
+}
+
+/*selector.bias-left-post-content ul li::before { */
+
+/*    content:url(https://biasdev1.wpengine.com/wp-content/uploads/2023/09/tick2-1.svg); */
+/*    display:inline-block; */
+/*    position:absolute; */
+/*    left:0px; */
+
+/*} */
+   selector.bias-left-post-content ul {
+    
+    padding: 0px;
+}
+selector.bias-left-post-content ul li { 
+
+    background:url(https://biasdev1.wpengine.com/wp-content/uploads/2023/09/tick2-1.svg) no-repeat left center; !important; 
+    vertical-align: middle;
+    padding-left: 40px;
+    list-style: none;
+    word-break: break-word;
+    margin-bottom:10px;
+
+}
+
+selector.bias-left-post-content blockquote p, selector.bias-left-post-content blockquote cite {
+
+    color: #33415C;
+    font-family: "Inter", Sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5em;
+    font-style: normal;
+
+}
+
+selector.bias-left-post-content blockquote p {
+    position: relative;
+}
+
+selector.bias-left-post-content blockquote p::before {
+    content: ""; 
+    width: 100%;
+    position: absolute;
+    left: -40px;
+    max-width:4px; 
+    min-height:100% !important;
+    background: #FBB82B; 
+    display: inline-block; 
+}
+
+
+selector.bias-left-post-content .wp-block-button {
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    min-height: 50px;
+}
+
+selector.bias-left-post-content .wp-block-button a {
+
+    text-decoration: none !important;
+    color: #2F313A;
+    font-family: "Inter", Sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+    background: #FDD600;
+    border-radius: 6px;
+    transition: all .3s;
+}
+
+selector.bias-left-post-content .wp-block-button a:hover {
+
+    color: #FDD600;
+    background: #333333;
+}
+
+
+@media (width <= 425px) {
+    selector.bias-left-post-content h1,h2,h3,h4,h5,h6,p  {
+        text-align:center;
+    }
+   selector.bias-left-post-content .wp-block-buttons {
+       
+       justify-content:center;
+   }
+   
+   selector.bias-left-post-content ul {
+    
+    padding: 0 40px 0 40px;
+}
+
+selector.bias-left-post-content blockquote p, selector.bias-left-post-content blockquote cite {
+    text-align:left;
+}
+
+selector.bias-left-post-content blockquote p::before {
+    left:-20px;
+}
+    
+}

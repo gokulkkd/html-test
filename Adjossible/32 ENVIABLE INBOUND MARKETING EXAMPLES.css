@@ -1,0 +1,118 @@
+/* ===============================
+Section-2 css (Li box)
+================================== */
+
+.adj-li-holder {
+
+    gap: 30px;
+}
+
+.adj-li-item {
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 100px !important;
+
+}
+
+.adj-li-item .txt-container .featureHeadline p {
+
+    font-weight: bold;
+}
+
+.adj-li-item .txt-container .featureText {
+
+    display: none !important;
+}
+
+
+/* ===============================
+Section-2 css (Li box)
+================================== */
+.adj-cta-button {
+
+    width: 100%;
+}
+
+/* ===============================
+Hero Container css
+================================== */
+
+@media (width > 1024px) {
+
+    .adj-hero-container>.inner {
+
+        max-width: 100% !important;
+        padding: 0 100px;
+    }
+
+    .adj-hero-container>.inner .c-wrapper {
+
+        padding: 0;
+    }
+}
+
+
+/* ===============================
+Mobile Responsive Css <= 425px
+================================== */
+
+@media (width <=768px) {
+
+    .adj-hero-container :is(h1) {
+
+        font-size: 30px !important;
+    }
+
+    .adj-header-section,
+    .adj-hero-container {
+
+        padding: 50px 0 !important;
+
+    }
+
+    .adj-hero-container>.inner .c-wrapper .inner {
+
+        flex-direction: column !important;
+
+    }
+
+    .adj-cta-button-mob {
+
+        padding: 15px 30px !important;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    .heading-rX0F-wFX3u {
+
+        margin: 30px 0 !important;
+    }
+
+    .adj-li-holder {
+
+        flex-wrap: wrap !important;
+        gap: 20px !important;
+    }
+
+    .adj-li-item {
+        gap: 20px !important;
+
+    }
+
+    .adj-li-item .img-container {
+
+        width: 30% !important;
+    }
+
+    .c-row>.inner {
+
+        gap: 20px !important;
+    }
+
+    .adj-li-container-mob {
+
+        padding-bottom: 50px !important
+    }
+}
