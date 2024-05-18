@@ -6,4 +6,6 @@
 6. git remote add origin https://github.com/gokulkkd/test.git
 7. git remote -v
 8. git status 
-9.git push -u origin main
+9. git push -u origin main
+10.git branch -a (for getting which branch)
+11.git add . (for staging all) / git add foldername/filename.js
