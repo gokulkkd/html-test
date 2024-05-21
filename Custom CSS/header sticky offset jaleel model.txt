@@ -1,0 +1,17 @@
+div#ji-sticky-header.elementor-sticky--effects > #header1    {
+    
+    transition: 0.3s;
+    /*display: none;*/
+    height: 0;
+    overflow: hidden;
+    
+}
+
+div#ji-sticky-header.elementor-sticky--effects > #header2 .ji-site-logo{
+    width: 25%;
+    transition: 0.3s;
+}
+div#ji-sticky-header.elementor-sticky--effects > #header2 > div {
+    padding:10px 0;
+    transition: 0.3s;
+}

@@ -1,0 +1,10 @@
+.e-hotspot__tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 15px 15px 0;
+  border-style: solid;
+  border-color: #ffffff transparent transparent;
+}

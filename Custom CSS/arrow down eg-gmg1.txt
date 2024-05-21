@@ -1,0 +1,15 @@
+.circle-item.active:before {
+    content: "";
+    border: none;
+    border-radius: 0;
+    background: url(https://gabrielmarkdev.wpengine.com/wp-content/uploads/2023/08/pointer-down.svg);
+    width: 31px;
+    height: 26px;
+    top: calc(100% + 39px);
+    left: 50%;
+    transform: translateX(-50% );
+}
+
+.circle-item {
+	position:relative;
+}

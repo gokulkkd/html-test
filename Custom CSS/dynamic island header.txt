@@ -1,0 +1,35 @@
+div#stkyheader.elementor-sticky--effects>div>div,div#stkyheader.elementor-sticky--effects>div>div li>a{border-radius:50px}
+div#stkyheader {
+    width: 100% !important;
+    max-width: 100%;
+    left: 0 !important;
+}
+
+
+.sticky-logo{display:none;}
+@media(min-width:769px){
+.header-container,.header-container .header-left-col,.header-container .vd-hamburger-menu{transition-duration:.5s !Important; transition-property:width;}
+}
+.elementor-sticky--effects .main-logo{display:none;}
+.elementor-sticky--effects .sticky-logo{display:block !Important;}
+ div#stkyheader.elementor-sticky--effects>div>div li>a {
+    border-radius: 50px;
+    padding: 10px 10px;
+    margin: 8px 0 8px 10px;
+    font-size: 17px;
+    line-height: 1
+}
+ div#stkyheader.elementor-sticky--effects>div>div li:last-child>a{    padding: 16.5px 20px;
+    margin: 8px 0 8px 10px;}
+.elementor-sticky--effects .header-container{max-width :75%; width: 620px; padding:0;}
+.elementor-sticky--effects .header-left-col{width:10%;}
+.elementor-sticky--effects .vd-hamburger-menu{width:90%;padding-right:8px;}
+
+@media(max-width:768px){
+    .elementor-sticky--effects .header-container{padding:5px 0 ; top:15px;}
+    .elementor-sticky--effects .header-left-col{width:20%;}
+.elementor-sticky--effects .vd-hamburger-menu{width:80%;}
+div#stkyheader>div>div li>a{margin-left:0 !Important;}
+
+    
+}

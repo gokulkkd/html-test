@@ -1,0 +1,17 @@
+h1 {
+  font: 22px Arial;
+  display: inline-block;
+  padding: 1em 2em;
+  text-align: center;
+  color: white;
+  background: ; /* default color */
+
+  /* "to left" / "to right" - affects initial color */
+  background: linear-gradient(to left, #d6303b 50%, green 50%) right;
+  background-size: 200%;
+  transition: 0.5s ease-out;
+  
+}
+h1:hover {
+      background-position: left;
+}

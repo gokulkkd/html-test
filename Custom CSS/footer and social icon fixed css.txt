@@ -1,0 +1,8 @@
+selector{
+    position:fixed;
+    width:100%;
+    left:0;
+    top: 30%;
+    z-index:9999;
+    
+}

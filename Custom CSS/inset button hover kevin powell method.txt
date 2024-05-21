@@ -1,0 +1,32 @@
+.wrapper a {
+
+    font-size: 1.25rem;
+    max-width: 200px;
+    padding: 20px;
+    border: 1px solid var(--button-color);
+    display: inline-block;
+    color: #ffffff;
+    background: var(--button-color);
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    isolation: isolate;
+}
+
+
+.wrapper a::after {
+    content:"";
+    position: absolute;
+    z-index:-1;
+    background:var(--primary-color);
+    inset: 0;
+    scale: 0 1;
+    transform-origin: right; /*removed it for transition from center */
+    transition: scale 450ms;
+}
+
+.wrapper a:hover::after,
+.wrapper a:focus-visible::after {
+    scale: 1 1 ;
+    transform-origin: left; /*removed it for transition from center */
+}

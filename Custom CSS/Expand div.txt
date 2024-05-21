@@ -1,0 +1,72 @@
+/*CSS*/
+
+.bal-tabs {
+  cursor: pointer;
+  flex: 0.5;
+  overflow: hidden;
+  transition: flex 0.4s ease;
+}
+
+
+.bal-tabs.active {
+  flex-grow: 1;
+  flex-shrink: 0.83;
+}
+
+@media (width >= 768px) {
+    
+    .bal-content > .e-con-inner {
+        
+        min-height:600px;
+    }
+    .bal-heading {
+position: absolute;
+left:0;
+bottom: calc(0px + 50px);
+transform: rotate(270deg);
+white-space: nowrap;
+}
+
+}
+
+
+
+
+/*SCRIPT*/
+
+
+
+   <style>
+        .bal-content {
+            display: none;
+        }
+        .active .bal-text {
+            display: none;
+        }
+        .active .bal-content {
+            display: block;
+        }
+        
+
+    </style>
+    
+<script>
+    const balTabs = document.querySelectorAll(".bal-tabs");
+
+balTabs.forEach((tabs) => {
+  tabs.addEventListener("mouseover",  () => {
+    removeActiveClasses();
+    tabs.classList.add("active");
+  });
+});
+
+const removeActiveClasses = () => {
+  balTabs.forEach((tabs) => {
+    tabs.classList.remove("active");
+  });
+};
+
+</script>
+
+
+

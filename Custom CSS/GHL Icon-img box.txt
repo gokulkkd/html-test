@@ -1,0 +1,48 @@
+.test-img-wrapper {
+    display: flex;
+    flex-direction: row !important;
+    gap: 20px;
+    flex-wrap: wrap !important;
+}
+
+.test-img-wrapper>div {
+    width: 40% !important;
+    border: 1px solid darkgray;
+}
+
+.test-item {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px;
+}
+
+.img-container,
+.txt-container {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 !important;
+}
+
+.txt-container p {
+    display: none
+}
+
+.image-container {
+    width: 70px !important;
+    height: 70px !important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffeff0;
+    border-radius: 50%;
+}
+
+.image-container img {
+    width: 40px !important;
+    height: 40px !important;
+    object-fit: cover;
+    border-radius: 50%;
+}

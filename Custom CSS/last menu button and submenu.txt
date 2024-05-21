@@ -1,0 +1,122 @@
+ selector .elementor-nav-menu li:last-of-type .elementor-item {
+   padding: 10px 20px 10px 10px;
+   border-radius: 7px 30px 7px 7px;
+   margin-left: 15px;
+   line-height: 0;
+    border: 1px solid #C9202D;
+    color: #C9202D;
+      }
+      
+  
+      
+    selector .elementor-nav-menu li:last-of-type .elementor-item:hover {
+        background-color:#C9202D;
+        color:#ffffff;
+        border: 1px solid #C9202D;
+        }
+        
+selector .sub-menu {
+    
+    background: #FFFFFFBF;
+    border-radius:0 0 15px 15px;
+
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+   
+}
+
+selector .sub-menu li a:hover {
+    background:transparent !important;
+    color:#C9202D !important;
+    
+}
+
+selector .sub-menu li a:active {
+    background:transparent !important;
+    color:#C9202D !important;
+    
+}
+
+selector .sub-menu li a {
+
+    font-size:16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+selector .sub-menu li:nth-last-child(1) {
+
+    padding-bottom: 15px!important;
+}
+   
+@media (max-width: 768px) {
+    
+        selector .elementor-nav-menu--dropdown  ul li:last-of-type {
+            
+        display:flex;
+        justify-content:start;
+      
+        /*margin:15px 0 20px 0;*/
+
+
+
+        }
+        
+        
+ selector .elementor-nav-menu--dropdown > ul li:last-of-type .elementor-item {
+        margin-top:10px;
+        margin-left:18px !important;
+        margin-bottom:100px;
+    
+        padding:20px 20px 20px 10px ;
+    
+
+     }
+     
+    selector .elementor-nav-menu--dropdown {
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+        
+    /*    min-height:90vh;*/
+    } 
+    
+
+selector .sub-menu li a:hover {
+    background:transparent !important;
+    color:#C9202D !important;
+    
+}
+
+selector .sub-menu {
+    
+    background: #FFFFFFBF;
+    border-radius:0!important;
+    box-shadow:none !important;
+
+    backdrop-filter: blur(5px);
+   
+   
+}
+
+selector .sub-menu li a:hover {
+    background:transparent !important;
+    color:#C9202D !important;
+    
+}
+
+selector .sub-menu li a:active {
+    background:transparent !important;
+    color:#C9202D !important;
+    
+}
+
+selector .sub-menu li a {
+
+    font-size:14px !important;
+    padding-top:10px!important;
+    padding-bottom:10px !important;
+
+}
+
+
+    
+    
+}

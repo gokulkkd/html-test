@@ -1,0 +1,17 @@
+<script>
+       jQuery(document).ready(function($) {
+     function getSwiperInstance() {
+        var swiperTarget = $('#mg-our-service .swiper');
+         return swiperTarget.data('swiper');
+     }
+     $('#my-swiper-left').on('click', function() {
+  getSwiperInstance().slidePrev(500, true);
+ });
+     $('#my-swiper-right').on('click', function() {
+  getSwiperInstance().slideNext(500, true);
+ });
+    });
+</script>
+<style>
+    #my-swiper-left,#my-swiper-right{cursor:pointer}
+</style>

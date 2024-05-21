@@ -1,0 +1,11 @@
+    selector .elementor-nav-menu li:last-of-type .elementor-item {
+        display: inline-block;
+    padding: 0.4em 1.6em;
+    margin: 0.14em 0;
+    border: 0.16em solid rgba(0,0,0,0);
+    border-radius: 2em;
+    font-weight: 300;
+    color: rgba(255,255,255,0.9);
+    text-align: center;
+    background-color: rgba(0,0,0,.71);
+      }
