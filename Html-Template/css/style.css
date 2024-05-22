@@ -1,0 +1,215 @@
+/*===========================================================================*/
+/*! Var Declaration......... */
+/*===========================================================================*/
+
+:root {
+
+    /*+ Fonts Family */
+    --ml-p-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-s-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-t-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-btn-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-alt-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+
+
+    /*+ Fonts Size */
+    --ml-p-fontsize: 2.25rem;
+    --ml-s-fontsize: 1.5rem;
+    --ml-t-fontsize: 1.875rem;
+    --ml-m-fontsize: 1rem;
+    --ml-alt-fontsize: 1.25rem;
+
+    /*+ Font Colors */
+    --ml-p-color: #777777;
+    --ml-s-color: #000000;
+    --ml-t-color: #337AB7;
+    --ml-btn-color: #F6635C;
+    --ml-bg-color: #e1e0e0;
+    --ml-alt-color: #000065;
+    --ml-w-color: #ffffff;
+    --ml-blk-color: #000000;
+
+    /*+ Line Height */
+    --ml-p-lineheight: 1.8em;
+    --ml-s-lineheight: 1.8em;
+    --ml-t-lineheight: 1.8em;
+    font-size: 16px;
+
+}
+
+/*===========================================================================*/
+/*! Var Declaration End......... */
+/*===========================================================================*/
+
+/*===========================================================================*/
+/*! Basic resetting......... */
+/*===========================================================================*/
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+html {
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+
+    min-height: 100vh;
+    color: var(--ml-p-color);
+    font-family: var(--ml-p-fontfam);
+
+}
+
+img,
+picture,
+svg,
+video {
+
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+
+    color: inherit;
+}
+
+/*===========================================================================*/
+/*! Basic resetting End......... */
+/*===========================================================================*/
+
+.container {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 10px;
+    min-height: 100vh;
+    border: 1px solid red;
+}
+
+.wrapper ul {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.wrapper ul li {
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 15px;
+    /* display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    justify-items: center; */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+
+}
+
+li .para, .head {
+
+    flex-grow: 1;
+
+}
+
+h1 {
+
+    font-size: 26px;
+    color: #F6635C;
+    text-align: center;
+   
+
+}
+
+p {
+
+    color: #000000;
+    text-align: center;
+}
+
+ a {
+
+    display: inline-flex;
+    background: #F6635C;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    min-height: 40px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 50px;
+
+
+}
+
+.cover-wrapper {
+
+    overflow: hidden;
+    min-height: 200px;
+    max-width: 300px;
+}
+.cover {
+
+    padding: 20px;
+    min-height: 200px;
+    max-width: 300px;
+    margin-top: 20px;
+    display: grid;
+    place-items: center;
+    background: url('cutting-edge.webp') top center/cover;
+    color: #F6635C;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.cover-wrapper:hover .cover {
+
+
+    scale: 1.1;
+
+
+}
