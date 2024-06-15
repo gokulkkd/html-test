@@ -15,3 +15,29 @@
 <style>
     #my-swiper-left,#my-swiper-right{cursor:pointer}
 </style>
+
+
+
+using javascript
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    function getSwiperInstance() {
+        var swiperTarget = document.querySelector('#abaac-slider .swiper');
+        return swiperTarget.swiper;  // Swiper instances are stored in the 'swiper' property in vanilla JS
+    }
+
+    document.getElementById('sunnyday-swiper-left').addEventListener('click', function() {
+        getSwiperInstance().slidePrev(500, true);
+    });
+
+    document.getElementById('sunnyday-swiper-right').addEventListener('click', function() {
+        getSwiperInstance().slideNext(500, true);
+    });
+});
+
+</script>
+<style>
+    #sunnyday-swiper-left,#sunnyday-swiper-right{cursor:pointer}
+</style>
