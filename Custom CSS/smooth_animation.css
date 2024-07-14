@@ -1,0 +1,33 @@
+/* top to bottom */
+
+selector {
+    --speed: 2.5s;
+    animation: none !important;
+}
+
+selector>* {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: all var(--speed) ease-in-out;
+}
+
+selector.animated>* {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+}
+
+
+/* left to right 100 to 0 */
+
+selector {
+    --speed: 3s;
+    animation: none !important;
+}
+
+selector>* {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: all var(--speed) ease-in-out;
+}
+
+selector.animated>* {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}

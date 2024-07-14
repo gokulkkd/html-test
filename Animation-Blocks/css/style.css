@@ -1,0 +1,262 @@
+/*===========================================================================*/
+/*! Var Declaration......... */
+/*===========================================================================*/
+
+:root {
+
+    /*+ Fonts Family */
+    --ml-p-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-s-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-t-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-btn-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-alt-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+
+
+    /*+ Fonts Size */
+    --ml-p-fontsize: 2.25rem;
+    --ml-s-fontsize: 1.5rem;
+    --ml-t-fontsize: 1.875rem;
+    --ml-m-fontsize: 1rem;
+    --ml-alt-fontsize: 1.25rem;
+
+    /*+ Font Colors */
+    --ml-p-color: #777777;
+    --ml-s-color: #000000;
+    --ml-t-color: #337AB7;
+    --ml-btn-color: #F6635C;
+    --ml-bg-color: #e1e0e0;
+    --ml-alt-color: #000065;
+    --ml-w-color: #ffffff;
+    --ml-blk-color: #000000;
+
+    /*+ Line Height */
+    --ml-p-lineheight: 1.8em;
+    --ml-s-lineheight: 1.8em;
+    --ml-t-lineheight: 1.8em;
+    font-size: 16px;
+
+}
+
+/*===========================================================================*/
+/*! Var Declaration End......... */
+/*===========================================================================*/
+
+/*===========================================================================*/
+/*! Basic resetting......... */
+/*===========================================================================*/
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+html {
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+
+    min-height: 100vh;
+    color: var(--ml-w-color);
+    font-family: var(--ml-p-fontfam);
+
+}
+
+img,
+picture,
+svg,
+video {
+
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+
+    color: inherit;
+}
+
+/*===========================================================================*/
+/*! Basic resetting End......... */
+/*===========================================================================*/
+
+.container {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 10px;
+    min-height: 100vh;
+    border: 1px solid red;
+
+}
+
+
+.wrapper {
+
+    display: grid;
+    gap: 200px;
+}
+
+.section-empty {
+
+    min-height: 100vh;
+}
+
+.section-2,
+.section-3 {
+
+    display: grid;
+    gap: 30px;
+    min-height: 92vh;
+}
+
+.section-2 .div1,
+.section-2 .div2,
+.section-2 .div3,
+.section-3 .div1,
+.section-3 .div2,
+.section-3 .div3 {
+
+    min-height: 25vh;
+    display: flex;
+    gap: 20px;
+
+}
+
+.div-left {
+
+    width: 49%;
+    min-height: 100%;
+    flex-grow: 1;
+    background: #e1e0e0;
+}
+
+.div-right {
+
+    width: 49%;
+    min-height: 100%;
+    flex-grow: 1;
+    background: #F6635C;
+}
+
+.div-full {
+
+    width: 100%;
+    min-height: 100%;
+    flex-grow: 1;
+    background: #4b49c2;
+    padding: 40px 20px;
+}
+
+.div-l,
+.div-c,
+.div-r {
+
+    width: 32%;
+    background: #32926a;
+}
+
+/* @keyframes appear {
+
+    from {
+
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+
+        opacity: 1;
+        scale: 1;
+    }
+} */
+
+/* @keyframes appear {
+
+    from {
+
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateX(0px);
+    }
+} */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        clip-path: inset(0 0 100% 0);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+
+.block {
+
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes fadeIn {
+    from {
+            opacity: 0;
+
+        }
+    
+        to {
+            opacity: 1;
+
+        }
+}
+
+.fade-in-paragraph {
+opacity: 0;
+animation: fadeIn 4s ease-out forwards;
+
+}
