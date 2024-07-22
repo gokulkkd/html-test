@@ -1,0 +1,224 @@
+/*===========================================================================*/
+/*! Var Declaration......... */
+/*===========================================================================*/
+
+:root {
+
+    /*+ Fonts Family */
+    --ml-p-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-s-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-t-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-btn-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-alt-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+
+
+    /*+ Fonts Size */
+    --ml-p-fontsize: 2.25rem;
+    --ml-s-fontsize: 1.5rem;
+    --ml-t-fontsize: 1.875rem;
+    --ml-m-fontsize: 1rem;
+    --ml-alt-fontsize: 1.25rem;
+
+    /*+ Font Colors */
+    --ml-p-color: #777777;
+    --ml-s-color: #000000;
+    --ml-t-color: #337AB7;
+    --ml-btn-color: #F6635C;
+    --ml-bg-color: #e1e0e0;
+    --ml-alt-color: #000065;
+    --ml-w-color: #ffffff;
+    --ml-blk-color: #000000;
+
+    /*+ Line Height */
+    --ml-p-lineheight: 1.8em;
+    --ml-s-lineheight: 1.8em;
+    --ml-t-lineheight: 1.8em;
+    font-size: 16px;
+
+}
+
+/*===========================================================================*/
+/*! Var Declaration End......... */
+/*===========================================================================*/
+
+/*===========================================================================*/
+/*! Basic resetting......... */
+/*===========================================================================*/
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+html {
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+
+    min-height: 100vh;
+    color: var(--ml-p-color);
+    font-family: var(--ml-p-fontfam);
+
+}
+
+img,
+picture,
+svg,
+video {
+
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+
+    color: inherit;
+}
+
+/*===========================================================================*/
+/*! Basic resetting End......... */
+/*===========================================================================*/
+
+.container {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 10px;
+    min-height: 100vh;
+    border: 1px solid red;
+}
+
+.navbar {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #e2dddd;
+    padding: 20px 0;
+    padding: 20px;
+}
+
+
+.nav-menu {
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: end;
+}
+
+.button a {
+
+    display: inline-flex;
+    min-width: 100px;
+    min-height: 40px;
+    padding: 5px;
+    background: #F6635C;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    font-size: 20px;
+}
+
+.menu-list {
+
+    display: flex;
+    gap: 10px;
+
+}
+
+.menu-list a  {
+
+    padding: 10px;
+}
+#toggler, .navbar label {
+
+   display: none;
+}
+
+
+@media (width <=768px) {
+
+
+    .navbar {
+
+        gap: 5px;
+    }
+    .nav-menu {
+
+        width: 100%;
+        max-height: 0;
+        flex-direction: column;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+        
+        
+    }
+
+    .menu-list {
+
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+
+    }
+
+    .navbar label {
+
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #toggler:checked ~ .nav-menu {
+
+        transition: all 1s ease-out;
+        max-height: 100%;
+        opacity: 1;
+
+    }
+}
+

@@ -1,0 +1,33 @@
+New message from - ABAAC - [field id="name"]
+
+
+<p>A new email received from ABAAC website, following are the submitted information </p>  
+
+<p><strong>Name: </strong> [field id="name"] <br> 
+
+<strong>E-mail:</strong> [field id="email"] <br>
+
+ <strong>Company:</strong> [field id="field_20083b6"] <br>
+
+<strong>Subject:</strong> [field id="field_7a4bab0"] <br> 
+
+<strong>Message:</strong> [field id="message"] </p> 
+
+New Resume from - ABAAC - [field id="name"]
+
+
+<p>A new email received from ABAAC Careers , following are the submitted information </p>  
+
+<p><strong>Name: </strong> [field id="name"] <br> 
+
+<strong>E-mail:</strong> [field id="email"] <br>
+
+ <strong>Phone:</strong> [field id="field_20083b6"] <br>
+
+<strong>Job type:</strong> [field id="field_d79150c"] <br> 
+
+<strong>Address:</strong> [field id="message"] <br> 
+
+<strong>Resume(Find in Attachments):</strong> [field id="field_86e02fc"] <br>
+
+<strong>Message:</strong> [field id="message"] </p> 
