@@ -1,0 +1,224 @@
+/*===========================================================================*/
+/*! Var Declaration......... */
+/*===========================================================================*/
+
+:root {
+
+    /*+ Fonts Family */
+    --ml-p-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-s-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-t-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-btn-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+    --ml-alt-fontfam: "Segoe UI", Arial, sans-serif, "Lato";
+
+
+    /*+ Fonts Size */
+    --ml-p-fontsize: 2.25rem;
+    --ml-s-fontsize: 1.5rem;
+    --ml-t-fontsize: 1.875rem;
+    --ml-m-fontsize: 1rem;
+    --ml-alt-fontsize: 1.25rem;
+
+    /*+ Font Colors */
+    --ml-p-color: #777777;
+    --ml-s-color: #000000;
+    --ml-t-color: #337AB7;
+    --ml-btn-color: #F6635C;
+    --ml-bg-color: #e1e0e0;
+    --ml-alt-color: #000065;
+    --ml-w-color: #ffffff;
+    --ml-blk-color: #000000;
+
+    /*+ Line Height */
+    --ml-p-lineheight: 1.8em;
+    --ml-s-lineheight: 1.8em;
+    --ml-t-lineheight: 1.8em;
+    font-size: 16px;
+
+}
+
+.dark-mode {
+
+    --ml-p-color: #141313;
+    --ml-s-color: #000000;
+    --ml-t-color: #c4c9ce;
+    --ml-btn-color: #F6635C;
+    --ml-bg-color: #0e0808;
+    --ml-alt-color: #a30afc;
+    --ml-w-color: #000000;
+    --ml-blk-color: #ffffff;
+}
+
+/*===========================================================================*/
+/*! Var Declaration End......... */
+/*===========================================================================*/
+
+/*===========================================================================*/
+/*! Basic resetting......... */
+/*===========================================================================*/
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+html {
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+
+    min-height: 100vh;
+    color: var(--ml-p-color);
+    font-family: var(--ml-p-fontfam);
+    background: var(--ml-w-color);
+
+}
+
+img,
+picture,
+svg,
+video {
+
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+
+    color: inherit;
+}
+
+/*===========================================================================*/
+/*! Basic resetting End......... */
+/*===========================================================================*/
+
+.container {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    border: 1px solid red;
+}
+
+header #theme-switch {
+
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    color: var(--ml-blk-color);
+    cursor: pointer;
+}
+
+header #theme-switch svg {
+
+    fill: var(--ml-alt-color);
+}
+
+header #theme-switch svg:last-child {
+
+    display: none;
+}
+.dark-mode header #theme-switch svg:first-child {
+
+    display: none;
+}
+
+.dark-mode header #theme-switch svg:last-child {
+
+    display: block;
+}
+
+.sec-1 {
+
+    background: var(--ml-w-color);
+    padding: 70px 10px;
+
+}
+
+.sec-2 {
+
+    background: var(--ml-bg-color);
+    padding: 70px 10px;
+}
+
+.sec-3 {
+
+    background: var(--ml-p-color);
+    padding: 70px 10px;
+}
+
+.sec-1 h1 {
+
+    color: var(--ml-btn-color);
+}
+
+.sec-1 p {
+
+    color: var(--ml-blk-color);
+}
+
+.sec-2 h1 {
+
+    color: var(--ml-alt-color);
+
+}
+
+.sec-2 p {
+
+    color: var(--ml-t-color);
+}
+
+.sec-3 h1 {
+
+    color: var(--ml-blk-color);
+}
+
+.sec-3 p {
+
+    color: var(--ml-btn-color);
+}
