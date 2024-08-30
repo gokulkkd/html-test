@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="wrapper">
+                <div class="popup-box">
+                    <a class="button" href="#popup1">Let me Pop up</a>
+                </div>
+                <div class="overlay" id="popup1">
+                    <div class="popup">
+                        <div class="popup-head">
+                            <a class="popup-close" href="#" onclick="closePopup()"><i class="fa-solid fa-xmark"></i></a>
+                        </div>
+                        <div class="popup-content">
+                            <h2>Thank you for popping me out of that button, but now I'm done so you can close this
+                                window.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
