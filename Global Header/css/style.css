@@ -1,0 +1,519 @@
+/*===========================================================================*/
+/*! Var Declaration......... */
+/*===========================================================================*/
+
+:root {
+
+    /*+ Fonts Family */
+    --abc-p-fontfam: "Inter", sans-serif;
+    --abc-s-fontfam: "Inter", sans-serif;
+    --abc-t-fontfam: "Inter", sans-serif;
+    --abc-btn-fontfam: "Inter", sans-serif;
+    --abc-alt-fontfam: "Inter", sans-serif;
+
+
+    /*+ Fonts Size */
+    --abc-p-fontsize: 1.25rem;
+    --abc-s-fontsize: 2.5rem;
+    --abc-t-fontsize: 1.875rem;
+    --abc-m-fontsize: 1rem;
+    --abc-alt-fontsize: 1.25rem;
+
+    /*+ Font Colors */
+    --abc-p-color: #00499C;
+    --abc-s-color: #000000;
+    --abc-t-color: #414141;
+    --abc-btn-color: #008764;
+    --abc-bg-color: #e1e0e0;
+    --abc-alt-color: #000065;
+    --abc-w-color: #ffffff;
+    --abc-blk-color: #000000;
+    --abc-header-wrap: #0077FF;
+    --abc-main-side: #f5f5f5;
+
+    /*+ Line Height */
+    --abc-p-lineheight: 1.4em;
+    --abc-s-lineheight: 1.8em;
+    --abc-t-lineheight: 1.8em;
+    font-size: 16px;
+
+}
+
+/*===========================================================================*/
+/*! Var Declaration End......... */
+/*===========================================================================*/
+
+/*===========================================================================*/
+/*! Basic resetting......... */
+/*===========================================================================*/
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+html {
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+
+    min-height: 100vh;
+    color: var(--abc-p-color);
+    font-family: var(--abc-p-fontfam);
+
+}
+
+img,
+picture,
+svg,
+video {
+
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+
+    color: inherit;
+}
+
+/*===========================================================================*/
+/*! Basic resetting End......... */
+/*===========================================================================*/
+
+.abc-section-1 {
+
+    padding: 0 10px;
+}
+
+.container {
+
+    max-width: 1220px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 0 10px;
+}
+
+/*===========================================================================*/
+/*! Header ......... */
+/*===========================================================================*/
+
+.container .abc-header {
+
+    display: flex;
+    background: var(--abc-main-side);
+}
+
+.container .abc-header .abc-header-wrap {
+
+    flex-grow: 1;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)), #0077FF;
+    ;
+    padding: 20px 10px;
+
+}
+
+.container .abc-header .abc-header-wrap .abc-logo {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.container .abc-header .abc-header-wrap .abc-logo-wrap {
+
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .abc-header .abc-header-wrap .abc-menu ul {
+
+    display: flex;
+    gap: 10px;
+}
+
+.container .abc-header .abc-header-wrap .abc-menu ul li a {
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--abc-w-color);
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.container .abc-header .abc-header-wrap .abc-menu ul li a:is(:hover, :active, :focus),
+.container .abc-header .abc-header-wrap .abc-menu ul li.active a {
+
+    background: var(--abc-w-color);
+    border-radius: 20px;
+    color: var(--abc-p-color);
+
+}
+
+#abc-btn {
+
+    display: none;
+}
+
+.fa-xmark {
+
+    display: none;
+}
+
+/*===========================================================================*/
+/*! Responsive Mobile section......... */
+/*===========================================================================*/
+
+/*+ For Header */
+
+@media (width < 768px) {
+
+    .abc-section-1-mob,
+    .container-mob {
+
+        padding: 0;
+    }
+
+    .fa-xmark {
+
+        display: none;
+    }
+
+    #abc-btn {
+
+        display: block;
+        margin-left: auto;
+    }
+
+    #abc-btn,
+    #abc-btn2 {
+
+        color: var(--abc-w-color);
+        font-size: 25px;
+
+    }
+
+    #abc-btn2 {
+
+        font-size: 30px;
+    }
+
+    .abc-hide-show {
+
+        display: none;
+
+    }
+
+    .abc-navhide {
+
+        display: block;
+        transform: translateX(-100%);
+        z-index: 9;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        animation: slideInFromLeft 1s ease-in-out forwards;
+
+    }
+
+    @keyframes slideInFromLeft {
+
+        from {
+            transform: translateX(-100%);
+
+        }
+
+        to {
+            transform: translateX(0);
+
+        }
+    }
+
+    .fade-in {
+
+        animation: slideOutLeft 0.5s ease-in forwards;
+    }
+
+    @keyframes slideOutLeft {
+
+        0% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateX(-100%);
+            /* opacity: 0; */
+            display: none;
+        }
+    }
+
+    .container .abc-header {
+
+        flex-direction: column;
+    }
+
+    .container .abc-header .abc-header-wrap {
+
+        width: 100%;
+        border-radius: 0;
+        padding: 0;
+        position: fixed;
+        z-index: 99;
+
+    }
+
+    .container .abc-header .abc-header-wrap .abc-logo-wrap {
+
+        display: block;
+
+    }
+
+    .container .abc-header .abc-header-wrap .abc-logo {
+
+        padding: 20px 15px;
+        align-items: center;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)), #0077FF;
+        position: relative;
+        z-index: 99;
+
+    }
+
+    .container .abc-header .abc-header-wrap .abc-logo img {
+
+        max-width: 80%;
+    }
+
+    .container .abc-header .abc-header-wrap .abc-menu ul {
+
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        position: fixed;
+        z-index: 9;
+        top: 0;
+        left: 0;
+        width: 75%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), linear-gradient(30.16deg, #00DDE2 8.24%, #0077FF 59.88%), #0077FF;
+        height: 100vh;
+        padding: 90px 15px 20px 0;
+
+    }
+
+    .container .abc-header .abc-header-wrap .abc-menu ul li a {
+
+        padding: 10px 10px 10px 15px;
+        margin: 0;
+        font-size: 1.2rem;
+    }
+
+    .container .abc-header .abc-header-wrap .abc-menu ul li a:is(:hover, :active, :focus),
+    .container .abc-header .abc-header-wrap .abc-menu ul li.active a {
+
+        border-radius: 0px 50px 50px 0px;
+        background: var(--abc-main-side);
+        transition: all 0.05s;
+
+    }
+}
+
+/*===========================================================================*/
+/*! Responsive Tablet section......... */
+/*===========================================================================*/
+
+
+/*+ For Header */
+
+@media(768px <=width <=1024px) {
+
+    .abc-section-1-mob,
+    .container-mob {
+
+        padding: 0;
+    }
+
+    .fa-xmark {
+
+        display: none;
+    }
+
+    #abc-btn {
+
+        display: block;
+        margin-left: auto;
+    }
+
+    #abc-btn,
+    #abc-btn2 {
+
+        color: var(--abc-w-color);
+        font-size: 25px;
+
+    }
+
+    #abc-btn2 {
+
+        font-size: 30px;
+    }
+
+    .abc-hide-show {
+
+        display: none;
+
+    }
+
+    .abc-navhide {
+
+        display: block;
+        transform: translateX(-100%);
+        z-index: 9;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        animation: slideInFromLeft 1s ease-in-out forwards;
+
+    }
+
+    @keyframes slideInFromLeft {
+
+        from {
+            transform: translateX(-100%);
+
+        }
+
+        to {
+            transform: translateX(0);
+
+        }
+    }
+
+    .fade-in {
+
+        animation: slideOutLeft 0.5s ease-in forwards;
+
+    }
+
+    @keyframes slideOutLeft {
+
+        0% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateX(-100%);
+            /* opacity: 0; */
+            display: none;
+        }
+    }
+
+    .container .abc-header {
+
+        flex-direction: column;
+    }
+
+    .container .abc-header .abc-header-wrap {
+
+        width: 100%;
+        border-radius: 0;
+        padding: 0;
+        position: fixed;
+        z-index: 99;
+
+    }
+
+    .container .abc-header .abc-header-wrap .abc-logo-wrap {
+
+        display: block;
+
+    }
+
+    .container .abc-header .abc-header-wrap .abc-logo {
+
+        padding: 20px 15px;
+        align-items: center;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)), #0077FF;
+        position: relative;
+        z-index: 99;
+
+    }
+
+    .container .abc-header .abc-header-wrap .abc-menu ul {
+
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        position: fixed;
+        z-index: 9;
+        top: 0;
+        left: 0;
+        width: 40%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), linear-gradient(30.16deg, #00DDE2 8.24%, #0077FF 59.88%), #0077FF;
+        height: 100vh;
+        padding: 105px 15px 20px 0;
+
+    }
+
+    .container .abc-header .abc-header-wrap .abc-menu ul li a {
+
+        padding: 10px 10px 10px 15px;
+        margin: 0;
+        font-size: 1.2rem;
+    }
+
+    .container .abc-header .abc-header-wrap .abc-menu ul li a:is(:hover, :active, :focus),
+    .container .abc-header .abc-header-wrap .abc-menu ul li.active a {
+
+        border-radius: 0px 50px 50px 0px;
+        background: var(--abc-main-side);
+        transition: all 0.05s;
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Typing Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .typing-container {
+            display: inline-block;
+        }
+
+        .typing-animation {
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid #333;
+            animation: blink 0.75s step-end infinite;
+        }
+
+        .typing-animation h3 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes blink {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: #333
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="typing-container">
+        <div class="typing-animation">
+            <h3>Welcome to the typing animation!</h3>
+        </div>
+    </div>
+
+    <script>
+        const textContainer = document.querySelector('.typing-animation');
+        const text = textContainer.querySelector('h3');
+        const container = document.querySelector('.typing-container');
+
+        // Set the initial width to 0
+        textContainer.style.width = '0';
+
+        let textWidth = text.scrollWidth;
+        container.style.width = textWidth + 'px';
+
+        let currentWidth = 0;
+        const animationDuration = 3500; // 3.5 seconds
+        const fps = 60;
+        const increment = textWidth / (animationDuration / 1000 * fps);
+
+        function animate() {
+            if (currentWidth < textWidth) {
+                currentWidth += increment;
+                textContainer.style.width = Math.min(currentWidth, textWidth) + 'px';
+                requestAnimationFrame(animate);
+            }
+        }
+
+        animate();
+    </script>
+</body>
+
+</html>
