@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticker Tap</title>
+</head>
+<style>
+    * {
+
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+ .hli-header,
+.hli-header .hli-container {
+    width: 100%;
+}
+
+.hli-header .hli-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.hli-header .container a {
+    text-decoration: none;
+}
+
+.hli-header .hli-container .wrapper {
+    padding: 5px 10px;
+    display: flex;
+    gap: 8px 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--ticker-bg);
+    height: 35px;
+    overflow: hidden;
+}
+
+.hli-header .hli-container .wrapper:hover,
+.hli-header .hli-container .wrapper:active {
+    background: var(--ticker-hover-bg);
+}
+
+.hli-header .hli-container .wrapper img {
+    max-width: 75px;
+    max-height: 25px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.hli-header .hli-container .wrapper p {
+    margin: 0;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--ticker-text-color);
+    text-align: center;
+}
+
+/* Mobile */
+@media (width < 768px) {
+
+    .hli-header .hli-container .wrapper {
+        flex-direction: column;
+        gap: 5px;
+        height: 85px;
+        overflow: hidden;
+    }
+}
+
+/* Tablet */
+@media (768px <=width <=1024px) {
+
+
+    .hli-header .hli-container .wrapper {
+
+        height: 75px;
+        overflow: hidden;
+    }
+}
+</style>
+
+<body>
+    <div class="hli-header">
+        <div class="hli-container">
+            <a href="https://directory.imts.com/8_0/exhibitor/00001269/Hamar-Laser-Instruments-Inc" target="_blank">
+                <div class="wrapper">
+                    <img src="IMTS-257x78-1.png" alt="">
+                    <p>See a demo of shaft alignment and geometric lasers at IMTS September 14-19</p>
+                </div>
+            </a>
+            <a href="https://directory.imts.com/8_0/exhibitor/00001269/Hamar-Laser-Instruments-Inc" target="_blank">
+                <div class="wrapper">
+                    <img src="HLI-SMRP.png" alt="">
+                    <p>See a demo of shaft alignment and geometric lasers at IMTS September 14-19</p>
+                </div>
+            </a>
+            <a href="https://directory.imts.com/8_0/exhibitor/00001269/Hamar-Laser-Instruments-Inc" target="_blank">
+                <div class="wrapper">
+                    <img src="tps.png">
+                    <p>See a demo of shaft alignment and geometric lasers at IMTS September 14-19</p>
+                </div>
+            </a>
+            <a href="https://directory.imts.com/8_0/exhibitor/00001269/Hamar-Laser-Instruments-Inc" target="_blank">
+                <div class="wrapper">
+                    <img src="IMTS-257x78-1.png" alt="">
+                    <p>See a demo of shaft alignment and geometric lasers at IMTS September 14-19</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+            const container = document.querySelector(".hli-header .hli-container");
+
+            if (!container) return;
+
+            const slides = container.querySelectorAll(":scope > a");
+
+            if (slides.length <= 1) return;
+
+            const wrappers = container.querySelectorAll(":scope > a .wrapper");
+
+            let current = 0;
+            let timer = null;
+            let isPaused = false;
+
+            const delay = 3000; // 3 seconds
+            const duration = 600; // Slide animation speed
+
+            // Find the tallest wrapper
+            let maxHeight = 0;
+
+            wrappers.forEach(function (wrapper) {
+                maxHeight = Math.max(maxHeight, wrapper.offsetHeight);
+            });
+
+            // Prevent layout jumping
+            container.style.height = maxHeight + "px";
+            container.style.overflow = "hidden";
+            container.style.position = "relative";
+
+            // Initial slide setup
+            slides.forEach(function (slide, index) {
+                slide.style.position = "absolute";
+                slide.style.width = "100%";
+                slide.style.top = "0";
+                slide.style.left = "0";
+
+                const wrapper = slide.querySelector(".wrapper");
+
+                if (index === 0) {
+                    slide.style.display = "block";
+                    wrapper.style.transform = "translateY(0)";
+                } else {
+                    slide.style.display = "none";
+                    wrapper.style.transform = "translateY(-100%)";
+                }
+            });
+
+            // Slide to next item
+            function nextSlide() {
+                if (isPaused) return;
+
+                const currentSlide = slides[current];
+                const currentWrapper = currentSlide.querySelector(".wrapper");
+
+                // Move to next slide
+                current = (current + 1) % slides.length;
+
+                const nextSlide = slides[current];
+                const nextWrapper = nextSlide.querySelector(".wrapper");
+
+                // Show next slide
+                nextSlide.style.display = "block";
+
+                // Put next wrapper above
+                nextWrapper.style.transition = "none";
+                nextWrapper.style.transform = "translateY(-100%)";
+
+                // Force browser repaint
+                nextWrapper.offsetHeight;
+
+                // Slide current wrapper down
+                currentWrapper.style.transition = `transform ${duration}ms ease`;
+
+                currentWrapper.style.transform = "translateY(100%)";
+
+                // Slide next wrapper down
+                nextWrapper.style.transition = `transform ${duration}ms ease`;
+
+                nextWrapper.style.transform = "translateY(0)";
+
+                // Hide previous slide after animation
+                setTimeout(function () {
+                    currentSlide.style.display = "none";
+
+                    currentWrapper.style.transition = "none";
+                    currentWrapper.style.transform = "translateY(0)";
+                }, duration);
+            }
+
+            // Start timer
+            function startTimer() {
+                clearInterval(timer);
+
+                timer = setInterval(function () {
+                    nextSlide();
+                }, delay);
+            }
+
+            // Pause when mouse enters
+            container.addEventListener("mouseenter", function () {
+                isPaused = true;
+
+                clearInterval(timer);
+            });
+
+            // Resume when mouse leaves
+            container.addEventListener("mouseleave", function () {
+                isPaused = false;
+
+                startTimer();
+            });
+
+            // Start slider
+            startTimer();
+        });
+
+    </script>
+</body>
+
+</html>
