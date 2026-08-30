@@ -1,4 +1,7 @@
-/* ===== RESET ===== */
+/* ========================================
+   RESET
+======================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,172 +9,615 @@
     font-family: "Inter", sans-serif;
 }
 
+
+/* ========================================
+   BODY
+======================================== */
+
 body {
     background: linear-gradient(135deg, #eef2ff, #f8fafc);
     color: #1e293b;
 }
 
-/* ===== SECTION ===== */
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.site-header {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.nav-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 125px;
+    padding: 11px 22px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.75);
+    color: #334155;
+
+    border: 1px solid rgba(203, 213, 225, 0.8);
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.04);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.nav-button:hover {
+    transform: translateY(-2px);
+
+    background: #ffffff;
+
+    color: #2563eb;
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.12);
+}
+
+
+.nav-button.active {
+    background: linear-gradient(135deg,
+            #0ea5e9,
+            #2563eb);
+
+    color: #ffffff;
+
+    border-color: transparent;
+
+    box-shadow:
+        0 6px 16px rgba(37, 99, 235, 0.25);
+}
+
+
+.nav-button.active:hover {
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(37, 99, 235, 0.30);
+}
+
+
+/* ========================================
+   LINE BREAK SECTION
+======================================== */
+
 .section-1 {
     min-height: 100dvh;
+
     display: flex;
     align-items: center;
 }
 
-/* ===== CONTAINER ===== */
+
+/* ========================================
+   CONTAINER
+======================================== */
+
 .container {
     max-width: 1220px;
+
     width: 100%;
+
     padding: 0 20px;
+
     margin: auto;
 }
 
-/* ===== LAYOUT ===== */
+
+/* ========================================
+   LINE BREAK LAYOUT
+======================================== */
+
 .box-holder {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 20px;
 }
 
-/* ===== BOX ===== */
+
+/* ========================================
+   LINE BREAK BOXES
+======================================== */
+
 .box-1,
 .box-2 {
+
     background: #ffffff;
+
     border-radius: 16px;
+
     padding: 40px 30px;
+
     box-shadow:
         0 10px 25px rgba(0, 0, 0, 0.05),
         0 2px 6px rgba(0, 0, 0, 0.04);
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
 }
 
-/* ===== TITLE ===== */
+
+/* ========================================
+   TITLE
+======================================== */
+
 .title h2 {
+
     font-size: 20px;
+
     margin-bottom: 20px;
+
     font-weight: 600;
 }
 
-/* ===== TEXTAREA ===== */
+
+/* ========================================
+   TEXTAREA
+======================================== */
+
 textarea {
+
     width: 100%;
+
     height: 400px;
+
     resize: none;
+
     border-radius: 12px;
+
     border: 1px solid #e5e7eb;
+
     padding: 12px;
+
     font-size: 14px;
+
+    line-height: 1.6;
+
     outline: none;
+
     transition: all 0.25s ease;
+
     background: #f9fafb;
+
     color: #1e293b;
 }
 
+
 textarea:focus {
+
     background: #ffffff;
+
     border-color: #cbd5e1;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
-/* ===== BUTTON GROUPS ===== */
+
+textarea::placeholder {
+
+    color: #94a3b8;
+}
+
+
+/* ========================================
+   LINE BREAK BUTTON GROUPS
+======================================== */
+
 .button-group1,
 .button-group2 {
+
     margin-top: 25px;
 }
 
+
 .button-group1 {
+
     display: flex;
+
     gap: 10px;
 }
 
-/* ===== BUTTON BASE ===== */
-button {
-    border: none;
-    padding: 12px 20px;
-    border-radius: 50px;
-    /* OVAL */
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-}
-
-/* ===== PRIMARY BUTTON ===== */
-#remove-linebreak,
-#copy-to-clip {
-    background: linear-gradient(135deg, #0ea5e9, #2563eb);
-    color: #ffffff;
-    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
-}
-
-#remove-linebreak:hover,
-#copy-to-clip:hover {
-    transform: translateY(-2px) scale(1);
-    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.35);
-}
-
-#remove-linebreak:active,
-#copy-to-clip:active {
-    transform: scale(0.98);
-    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
-}
-
-/* ===== SECONDARY BUTTON ===== */
-#reset-linebreak {
-    background: #ffffff;
-    color: #334155;
-    border: 1px solid #d1d5db;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-#reset-linebreak:hover {
-    background: #f8fafc;
-    border-color: #cbd5e1;
-    transform: translateY(-1px);
-}
-
-#reset-linebreak:active {
-    transform: scale(0.97);
-    background: #f1f5f9;
-}
-
-/* ===== COPIED TEXT ===== */
 
 .button-group2 {
 
     display: flex;
+
     gap: 20px;
 }
+
+
+/* ========================================
+   BUTTON BASE
+======================================== */
+
+button {
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    font-weight: 500;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* ========================================
+   PRIMARY BUTTON
+======================================== */
+
+#remove-linebreak,
+#copy-to-clip,
+#copy-notepad,
+#save-notepad {
+
+    background: linear-gradient(135deg,
+            #0ea5e9,
+            #2563eb);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 16px rgba(37, 99, 235, 0.25);
+}
+
+
+#remove-linebreak:hover,
+#copy-to-clip:hover,
+#copy-notepad:hover,
+#save-notepad:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(37, 99, 235, 0.35);
+}
+
+
+#remove-linebreak:active,
+#copy-to-clip:active,
+#copy-notepad:active,
+#save-notepad:active {
+
+    transform: scale(0.98);
+
+    box-shadow:
+        0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+
+/* ========================================
+   SECONDARY BUTTON
+======================================== */
+
+#reset-linebreak,
+#reset-notepad {
+
+    background: #ffffff;
+
+    color: #334155;
+
+    border: 1px solid #d1d5db;
+
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+#reset-linebreak:hover,
+#reset-notepad:hover {
+
+    background: #f8fafc;
+
+    border-color: #cbd5e1;
+
+    transform: translateY(-1px);
+}
+
+
+#reset-linebreak:active,
+#reset-notepad:active {
+
+    transform: scale(0.97);
+
+    background: #f1f5f9;
+}
+
+
+/* ========================================
+   COPIED MESSAGE
+======================================== */
+
 .button-group2 p {
+
     margin-top: 10px;
+
     font-size: 13px;
+
     color: #16a34a;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ========================================
+   NOTEPAD SECTION
+======================================== */
+
+.notepad-section {
+    width: 100%;
+
+    height: 100dvh;
+
+    padding: 100px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   NOTEPAD BOX
+======================================== */
+
+.notepad-box {
+    width: 80vw;
+
+    height: calc(100dvh - 200px);
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    padding: 40px 30px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.05),
+        0 2px 6px rgba(0, 0, 0, 0.04);
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 0;
+}
+
+
+/* ========================================
+   NOTEPAD HEADER
+======================================== */
+
+.notepad-header {
+    flex-shrink: 0;
+}
+
+
+/* ========================================
+   NOTEPAD TEXTAREA AREA
+======================================== */
+
+.notepad-area {
+    width: 100%;
+
+    flex: 1;
+
+    min-height: 0;
+}
+
+
+/* ========================================
+   NOTEPAD TEXTAREA
+======================================== */
+
+.notepad-area textarea {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 0;
+
+    resize: none;
+
+    display: block;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    padding: 16px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    outline: none;
+
+    background: #f9fafb;
+
+    color: #1e293b;
+
+    transition: all 0.25s ease;
+}
+
+
+.notepad-area textarea:focus {
+
+    background: #ffffff;
+
+    border-color: #cbd5e1;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+.notepad-area textarea::placeholder {
+
+    color: #94a3b8;
+}
+
+
+/* ========================================
+   NOTEPAD BUTTONS
+======================================== */
+
+.notepad-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    flex-shrink: 0;
+}
+
+
+/* ========================================
+   NOTEPAD MESSAGE
+======================================== */
+
+#notepad-message {
+
+    margin-top: 12px;
+
+    font-size: 13px;
+
+    color: #16a34a;
+
+    min-height: 18px;
+
+    flex-shrink: 0;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
 @media (max-width: 900px) {
-    .box-holder {
-        grid-template-columns: 1fr;
+
+    .notepad-section {
+
+        height: 100dvh;
+
+        padding: 80px 0;
     }
 
-    textarea {
-        height: 150px;
+
+    .notepad-box {
+
+        width: 94vw;
+
+        height: calc(100dvh - 160px);
+
+        padding: 30px 25px;
     }
 }
 
+
+/* ========================================
+   MOBILE
+======================================== */
+
 @media (max-width: 500px) {
-    .title h2 {
-        font-size: 18px;
+
+    .notepad-section {
+
+        height: auto;
+
+        min-height: 100dvh;
+
+        padding: 70px 0;
     }
 
-    button {
-        width: 100%;
+
+    .notepad-box {
+
+        width: calc(100% - 30px);
+
+        height: auto;
+
+        min-height: calc(100dvh - 140px);
+
+        padding: 30px 20px;
+
+        border-radius: 14px;
     }
 
-    .button-group1 {
+
+    .notepad-area {
+
+        flex: none;
+    }
+
+
+    .notepad-area textarea {
+
+        height: 350px;
+
+        min-height: 350px;
+    }
+
+
+    .notepad-buttons {
+
         flex-direction: column;
+    }
+
+
+    .notepad-buttons button {
+
+        width: 100%;
     }
 }
